@@ -29,7 +29,7 @@ async def fetch(session, password, semaphore, progress):
         if login_success:
             return  # 如果已经登录成功，直接返回
         data = {
-            "username_or_qq": username,
+            "username": username,
             "password": password
         }
         async with session.post(url, headers=headers, data=data) as response:
